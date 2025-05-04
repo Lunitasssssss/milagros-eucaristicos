@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papa Francisco y los Milagros Eucarísticos</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Carlo Acutis</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="carlo.html">Carlo</a></li>
+          <li class="nav-item"><a class="nav-link" href="milagros.html">Milagros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active" href="francisco.html">Francisco</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PORTADA -->
+  <header class="text-center p-5 bg-success text-white">
+    <div class="container">
+      <h1 class="fw-bold">Papa Francisco</h1>
+      <p class="lead mt-3">Testigo de fe y los milagros eucarísticos en nuestro tiempo.</p>
+    </div>
+  </header>
+
+  <!-- BIOGRAFÍA -->
+  <section class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="franciscoo.jpg" alt="Papa Francisco" class="img-fluid rounded shadow fade-in">
+
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold">¿Quién es el Papa Francisco?</h2>
+        <p class="mt-4">Nacido como Jorge Mario Bergoglio en Buenos Aires en 1936, Francisco es el primer Papa latinoamericano y jesuita de la historia. Su humildad, cercanía y amor por los pobres han conmovido al mundo.</p>
+        <p>Como Arzobispo de Buenos Aires, fue testigo directo de uno de los milagros eucarísticos modernos más impactantes: el de la hostia sangrante en 1996 en la Parroquia Santa María.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILAGRO DE BUENOS AIRES -->
+  <section class="container py-5">
+    <h3 class="fw-bold text-center mb-5">Milagro Eucarístico de Buenos Aires (1996)</h3>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="argentina.jpg" alt="Milagro Buenos Aires" class="img-fluid rounded shadow fade-in">
+      </div>
+      <div class="col-md-6">
+        <p>Una hostia consagrada cayó al suelo y, luego de ser preservada en agua, comenzó a sangrar. Bergoglio ordenó una investigación profunda. Los análisis revelaron tejido cardíaco humano, con signos de agonía intensa, sangre tipo AB. Este fenómeno reforzó el llamado a valorar el don de la Eucaristía.</p>
+        <a href="milagros.html" class="btn btn-success mt-3">Leer más milagros</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASES DE FRANCISCO -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h3 class="fw-bold mb-4">Palabras del Papa sobre la Eucaristía</h3>
+      <blockquote class="blockquote">
+        <p>"La Eucaristía es el corazón de la Iglesia. Nos une a Jesús y nos enseña a amar como Él amó."</p>
+      </blockquote>
+      <p class="text-muted">Papa Francisco</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2025 Proyecto Carlo Acutis. Unidos en la fe y la esperanza.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    // Función para detectar si un elemento está en el viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight && // Parte superior del elemento está en el viewport
+        rect.bottom > 0 // Parte inferior del elemento está en el viewport
+      );
+    }
+  
+    // Seleccionar todas las imágenes con la clase "fade-in"
+    const fadeElements = document.querySelectorAll('.fade-in');
+  
+    // Función para verificar y agregar la clase "show"
+    function checkFadeIn() {
+      fadeElements.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add('show');
+        }
+      });
+    }
+  
+    // Agregar evento de scroll y ejecutar al cargar la página
+    window.addEventListener('scroll', checkFadeIn);
+    window.addEventListener('load', checkFadeIn);
+  </script>
+
+</body>
+</html>

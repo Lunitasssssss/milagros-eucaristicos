@@ -1,0 +1,41 @@
+// Media Queries
+@media (max-width: 991px) {
+    // Cambios para tablet
+    body {
+      font-size: 1.2rem;
+    }
+    
+    nav {
+      flex-direction: column;
+    }
+    
+    .hero {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    // Cambios para celular
+    body {
+      font-size: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  @import "variables";
+@import "base";
+@import "components";
+@import "layout";
