@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería de Milagros Eucarísticos - Imágenes y Videos</title>
+  <meta name="description" content="Página que muestra imágenes y videos de los milagros eucarísticos reconocidos.">
+  <meta name="author" content="Luna Pajaro">
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .media-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ciberapostol de la Eucaristía</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="carlo.html">Carlo</a></li>
+          <li class="nav-item"><a class="nav-link" href="milagros.html">Milagros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="francisco.html">Francisco</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TÍTULO -->
+  <header class="container py-5">
+    <h1 class="text-center fw-bold">Galería de Milagros Eucarísticos</h1>
+    <p class="text-center">Imágenes y videos de los milagros eucarísticos reconocidos.</p>
+  </header>
+
+  <!-- GALERÍA DE IMÁGENES -->
+  <main class="container py-4">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="argentina.jpg" class="media-img" alt="Milagro en Buenos Aires, Argentina">
+      </div>
+      <div class="col-md-4">
+        <img src="italia.jpg" class="media-img" alt="Milagro en Lanciano, Italia">
+      </div>
+      <div class="col-md-4">
+        <img src="mexico.jpg" class="media-img" alt="Milagro en Tixtla, México">
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h2 class="text-center">📹 Testimonio visual</h2>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/5R1Z_h3x10I?si=-mvZ53ysqI4tliFp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">© 2025 Proyecto Carlo Acutis. Inspirando a las nuevas generaciones.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

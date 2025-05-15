@@ -4,21 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Carlo Acutis | Inspirador de una Generación</title>
+  <meta name="description" content="Conoce la vida, legado y mensaje de Carlo Acutis, el joven beato que revolucionó la fe con tecnología, alegría y amor a la Eucaristía.">
+  <meta name="keywords" content="Carlo Acutis, milagros eucarísticos, beato, juventud, fe, iglesia, tecnología, inspiración">
+  <meta name="author" content="Luna Pajaro">
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Estilos Bootstrap -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Tu CSS personalizado -->
+  <!-- Animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Animaciones con Animate.css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f7fafd; }
+    .media-img { max-height: 400px; object-fit: cover; }
+    .highlight { background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%); padding: 18px; border-left: 4px solid #0d6efd; margin-bottom: 20px; }
+    .alt-section { background: #f3f3f3; padding: 40px 0; }
+    .fact-list li { margin-bottom: 10px; }
+    .timeline { border-left: 3px solid #0d6efd; margin-left: 20px; padding-left: 20px; }
+    .timeline-event { margin-bottom: 30px; }
+    .timeline-event h5 { color: #0d6efd; }
+    .chip { display: inline-block; padding: 0.5em 1em; border-radius: 25px; background: #eaf3ff; color: #0d6efd; margin: 0 0.2em 0.5em 0; font-size: 0.95em; }
+    .fade-in { opacity: 0; transition: opacity 1s; }
+    .fade-in.show { opacity: 1; }
+    .modern-shadow { box-shadow: 0 4px 24px 0 rgba(13,110,253,0.08); }
+    @media (max-width: 767px) { .media-img { max-height: 220px; } }
+  </style>
 </head>
-
 <body>
 
   <!-- NAVBAR -->
@@ -35,118 +49,184 @@
           <li class="nav-item"><a class="nav-link" href="milagros.html">Milagros</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           <li class="nav-item"><a class="nav-link" href="francisco.html">Francisco</a></li>
-
         </ul>
       </div>
     </div>
   </nav>
 
+
+
+<!-- HERO -->
+<header class="bg-white py-5 fade-in" style="margin-top:56px; border-bottom: 1px solid #e3e6ea;">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center gap-5">
+    <div class="text-center text-md-start">
+      <h1 class="fw-bold display-4 mb-3 text-gradient animate__animated animate__fadeInDown" style="background: linear-gradient(90deg, #0d6efd 0%, #67e8f9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Carlo Acutis
+      </h1>
+      <p class="lead text-secondary mb-4 animate__animated animate__fadeInUp" style="max-width: 500px;">
+        El beato millennial que llevó la fe a Internet y al corazón de miles de jóvenes.
+      </p>
+      <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start mb-3">
+        <span class="chip">1991-2006</span>
+        <span class="chip">Beatificado 2020</span>
+        <span class="chip">Patrono de la informática</span>
+      </div>
+    </div>
+    <div>
+      <img src="carlo2.jpg" alt="Carlo Acutis joven" class="img-fluid rounded-circle shadow-lg" style="width: 200px; height: 200px; object-fit: cover; border: 6px solid #0d6efd;">
+    </div>
+  </div>
+</header>
+
   <!-- BIOGRAFÍA -->
-  <section class="container py-5">
+  <section class="container py-5 fade-in">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <img src="carlo2.jpg" alt="Carlo Acutis joven" class="img-fluid rounded shadow">
+        <img src="carlo-tecnologia.jpg" alt="Carlo y la tecnología" class="img-fluid rounded modern-shadow animate__animated animate__fadeInLeft">
       </div>
       <div class="col-md-6">
-        <h2 class="fw-bold">¿Quién fue Carlo Acutis?</h2>
-        <p class="mt-4">Carlo nació en Londres en 1991 y se trasladó de pequeño a Italia. Desde muy chico, demostró una profunda fe en la Eucaristía, y su vida estuvo marcada por una alegría contagiosa, solidaridad con los más necesitados y un uso creativo de la tecnología al servicio de Dios.</p>
-        <p>Amante de la informática, desarrolló con solo 11 años un sitio web que recopilaba los principales milagros eucarísticos del mundo, buscando que todos descubrieran que Jesús está vivo entre nosotros.</p>
-        <p>Carlo decía: <em>"La Eucaristía es mi autopista hacia el cielo"</em>. Falleció a los 15 años en 2006 debido a una leucemia fulminante, ofreciendo sus sufrimientos por el Papa y la Iglesia. Fue beatificado en 2020.</p>
+        <div class="highlight animate__animated animate__fadeInRight">
+          <h2 class="fw-bold">¿Quién fue Carlo?</h2>
+          <p>Nació en Londres en 1991 y creció en Milán. Desde pequeño, Carlo mostró una fe profunda y una pasión por la tecnología. Aprendió programación, diseño y edición de video de forma autodidacta.</p>
+          <ul class="fact-list">
+            <li>Creó con solo 11 años la primera web sobre milagros eucarísticos.</li>
+            <li>Ayudaba a los pobres y defendía a los que sufrían bullying.</li>
+            <li>Amaba el fútbol, los videojuegos y la naturaleza.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-<!-- MISIÓN Y LEGADO -->
-<section class="container py-5">
-  <div class="row align-items-center">
-    <div class="col-md-6 order-md-2">
-      <img src="carlo-tecnologia.jpg" alt="Carlo y la tecnología" class="img-fluid rounded shadow animate__animated animate__fadeInRight">
-    </div>
-    <div class="col-md-6 order-md-1">
-      <h2 class="fw-bold">Su misión y legado</h2>
-      <p class="mt-4">Carlo tenía claro que quería llevar a todos a amar la Eucaristía. Por eso, creó un sitio web donde documentó más de 160 milagros eucarísticos reconocidos por la Iglesia. Su exposición ha recorrido el mundo entero.</p>
-      <p>Además, desarrolló contenido sobre apariciones marianas y colaboró con parroquias locales. Su lema fue: <em>"La Eucaristía es mi autopista al cielo"</em>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FRASES CELEBRES -->
-<section class="bg-light py-5">
-  <div class="container text-center">
-    <h3 class="fw-bold mb-4">Frases célebres de Carlo Acutis</h3>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-4 bg-white shadow rounded animate__animated animate__fadeInUp">
-          <p>"Todos nacen como originales, pero muchos mueren como fotocopias."</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 bg-white shadow rounded animate__animated animate__fadeInUp animate__delay-1s">
-          <p>"La tristeza es mirar hacia uno mismo, la felicidad es mirar a Dios."</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 bg-white shadow rounded animate__animated animate__fadeInUp animate__delay-2s">
-          <p>"La Eucaristía es el camino más rápido al cielo."</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DATOS CURIOSOS -->
-<section class="container py-5">
-  <h3 class="text-center fw-bold mb-4">Datos curiosos sobre Carlo</h3>
-  <div class="row g-4">
-    <div class="col-md-6">
-      <ul class="list-group list-group-flush shadow">
-        <li class="list-group-item"> Su cuerpo fue hallado incorrupto en 2019.</li>
-        <li class="list-group-item"> Jugaba videojuegos solo 1 hora a la semana para no volverse adicto.</li>
-        <li class="list-group-item"> Amaba a los animales y ayudaba a personas sin hogar.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <ul class="list-group list-group-flush shadow">
-        <li class="list-group-item">Vestía con ropa común: jeans y zapatillas, pero era muy devoto.</li>
-        <li class="list-group-item"> Asistía a misa diaria desde los 7 años.</li>
-        <li class="list-group-item"> Está sepultado en Asís, en el Santuario del Despojo.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-  <!-- FRASE DESTACADA -->
-  <section class="bg-success bg-gradient text-white text-center py-5">
+  <!-- LÍNEA DE TIEMPO -->
+  <section class="alt-section fade-in">
     <div class="container">
-      <h3 class="fw-bold">"Estén siempre unidos a Jesús, ese es el objetivo de su vida"</h3>
-      <p class="mt-3">Carlo Acutis ✝️</p>
+      <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Línea de tiempo de Carlo</h2>
+      <div class="timeline">
+        <div class="timeline-event animate__animated animate__fadeInLeft">
+          <h5>1991</h5>
+          <p>Nace en Londres, se traslada a Milán.</p>
+        </div>
+        <div class="timeline-event animate__animated animate__fadeInRight">
+          <h5>1998</h5>
+          <p>Hace su Primera Comunión y comienza a ir a misa diaria.</p>
+        </div>
+        <div class="timeline-event animate__animated animate__fadeInLeft">
+          <h5>2002</h5>
+          <p>Comienza a documentar milagros eucarísticos y a crear su web.</p>
+        </div>
+        <div class="timeline-event animate__animated animate__fadeInRight">
+          <h5>2006</h5>
+          <p>Enfrenta la leucemia con fe y alegría. Ofrece su vida por el Papa y la Iglesia.</p>
+        </div>
+        <div class="timeline-event animate__animated animate__fadeInLeft">
+          <h5>2020</h5>
+          <p>Es beatificado en Asís. Su cuerpo fue hallado incorrupto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASES CELEBRES -->
+  <section class="bg-light py-5 fade-in">
+    <div class="container text-center">
+      <h3 class="fw-bold mb-4">Frases célebres de Carlo Acutis</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded animate__animated animate__fadeInUp">
+            <p class="mb-0">"Todos nacen como originales, pero muchos mueren como fotocopias."</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded animate__animated animate__fadeInUp animate__delay-1s">
+            <p class="mb-0">"La tristeza es mirar hacia uno mismo, la felicidad es mirar a Dios."</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded animate__animated animate__fadeInUp animate__delay-2s">
+            <p class="mb-0">"La Eucaristía es el camino más rápido al cielo."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATOS CURIOSOS -->
+  <section class="container py-5 fade-in">
+    <h3 class="text-center fw-bold mb-4">Datos curiosos sobre Carlo</h3>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <ul class="list-group list-group-flush shadow">
+          <li class="list-group-item">Su cuerpo fue hallado incorrupto en 2019.</li>
+          <li class="list-group-item">Jugaba videojuegos solo 1 hora a la semana para no volverse adicto.</li>
+          <li class="list-group-item">Amaba a los animales y ayudaba a personas sin hogar.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-group list-group-flush shadow">
+          <li class="list-group-item">Vestía con ropa común: jeans y zapatillas, pero era muy devoto.</li>
+          <li class="list-group-item">Asistía a misa diaria desde los 7 años.</li>
+          <li class="list-group-item">Está sepultado en Asís, en el Santuario del Despojo.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÚLTIMOS DÍAS Y MUERTE -->
+  <section class="alt-section fade-in">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 animate__animated animate__fadeInLeft">
+          <img src="carlotumba.jpg" alt="Tumba de Carlo Acutis en Asís" class="img-fluid rounded shadow media-img">
+        </div>
+        <div class="col-md-6 animate__animated animate__fadeInRight">
+          <div class="highlight">
+            <h2 class="h4">Sus últimos días y su muerte</h2>
+            <p>En octubre de 2006, Carlo fue diagnosticado con leucemia fulminante. A pesar del dolor, nunca perdió la alegría ni la fe. Ofreció su sufrimiento por el Papa y la Iglesia, y pidió ser enterrado en Asís, tierra de San Francisco.</p>
+            <ul class="fact-list">
+              <li>Murió el 12 de octubre de 2006, a los 15 años.</li>
+              <li>Sus últimas palabras: <em>"Estoy feliz de morir porque he vivido mi vida sin perder ni un minuto en cosas que no le agradan a Dios."</em></li>
+              <li>Fue beatificado el 10 de octubre de 2020 ante miles de jóvenes.</li>
+            </ul>
+            <blockquote class="blockquote mt-3">
+              <p class="mb-0">"Estén siempre unidos a Jesús, ese es el objetivo de su vida."</p>
+              <footer class="blockquote-footer text-end">Carlo Acutis</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- GALERÍA -->
-  <section class="container py-5">
+  <section class="container py-5 fade-in">
     <h3 class="text-center fw-bold mb-4">Imágenes de su vida</h3>
     <div class="row g-4">
-      <div class="col-md-4">
-        <img src="carlo1.jpg" alt="Carlo feliz" class="img-fluid rounded shadow-sm">
+      <div class="col-md-3">
+        <img src="carlo1.jpg" alt="Carlo feliz" class="img-fluid rounded shadow-sm modern-shadow">
       </div>
-      <div class="col-md-4">
-        <img src="CarloSotana.jpg" alt="Carlo con sotana" class="img-fluid rounded shadow-sm">
+      <div class="col-md-3">
+        <img src="CarloSotana.jpg" alt="Carlo con sotana" class="img-fluid rounded shadow-sm modern-shadow">
       </div>
-      <div class="col-md-4">
-        <img src="carloiglesia.jpg" alt="Carlo en iglesia" class="img-fluid rounded shadow-sm">
+      <div class="col-md-3">
+        <img src="carloiglesia.jpg" alt="Carlo en iglesia" class="img-fluid rounded shadow-sm modern-shadow">
       </div>
-    </div>
-   <div class="col-md-4">
-    <img src="carlotumba.jpg" alt="Carlo en iglesia" class="img-fluid rounded shadow-sm">
-  </div>
-
-
-
+      <div class="col-md-3">
+        <img src="carlotumba.jpg" alt="Tumba de Carlo Acutis" class="img-fluid rounded shadow-sm modern-shadow">
+      </div>
     </div>
     <div class="text-center mt-5">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/S_6dpy5FuS0?si=bkhrOF4Rc60vcRna" title="Carlo Acutis Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded shadow"></iframe>
+    </div>
+  </section>
+
+  <!-- RECURSOS Y ENLACES -->
+  <section class="alt-section fade-in">
+    <div class="container text-center">
+      <h3 class="fw-bold mb-4 animate__animated animate__fadeInDown">Recursos y enlaces</h3>
+      <a href="https://www.carloacutis.com/es/" target="_blank" rel="noopener" class="btn btn-info m-2">Sitio oficial de Carlo Acutis</a>
+      <a href="https://www.miracolieucaristici.org/" target="_blank" rel="noopener" class="btn btn-success m-2">Exposición digital de milagros</a>
+      <a href="milagros.html" class="btn btn-outline-secondary m-2">← Volver a la galería de milagros</a>
     </div>
   </section>
 
@@ -157,7 +237,26 @@
     </div>
   </footer>
 
-  <!-- Scripts Bootstrap -->
+  <!-- Scripts Bootstrap y animaciones -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fade-in animation on scroll
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight && rect.bottom > 0
+      );
+    }
+    const fadeElements = document.querySelectorAll('.fade-in');
+    function checkFadeIn() {
+      fadeElements.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add('show');
+        }
+      });
+    }
+    window.addEventListener('scroll', checkFadeIn);
+    window.addEventListener('load', checkFadeIn);
+  </script>
 </body>
 </html>

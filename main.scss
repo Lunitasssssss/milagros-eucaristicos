@@ -4,3 +4,11 @@
 @import 'base';
 @import 'layout';
 @import 'components';
+// Variables (al principio de main.scss)
+$verde-oscuro: #1b5e20;
+$amarillo: #ffd600;
+
+// Uso
+h2 {
+  color: $verde-oscuro;
+}
