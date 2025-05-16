@@ -10,7 +10,7 @@
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="img/favicon.png">
 
-  <!-- Tipografías -->
+    <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
@@ -48,10 +48,64 @@
         height: 200px;
       }
     }
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    .fade-in { opacity: 0; transition: opacity 1s; }
+    .fade-in.show { opacity: 1; }
+    .navbar.scrolled { background: #145a32 !important; transition: background 0.3s; }
+    .section-title { letter-spacing: 1px; }
+    .fact-list { padding-left: 1.2em; }
+    .fact-list li { margin-bottom: 10px; }
+    .highlight {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .alt-section {
+      background: #f3f3f3;
+      padding: 40px 0;
+    }
+    .timeline {
+      border-left: 3px solid #0d6efd;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+    .timeline-event {
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .timeline-event:before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background: #0d6efd;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #0d6efd;
+    }
+    @media (max-width: 575.98px) {
+      .media-img, .media-video, .ratio-16x9 {
+        height: 140px;
+      }
+      .timeline {
+        margin-left: 10px;
+        padding-left: 10px;
+      }
+      .highlight {
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
+    <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Ciberapostol de la Eucaristía</a>
@@ -71,7 +125,7 @@
 
   <!-- TÍTULO Y DESCRIPCIÓN -->
   <header class="container py-5 fade-in" style="margin-top:80px;">
-    <h1 class="text-center fw-bold section-title animate__animated animate__fadeInDown">🕊️ Milagro Eucarístico en Buenos Aires, Argentina</h1>
+    <h1 class="text-center fw-bold section-title animate__animated animate__fadeInDown">Milagro Eucarístico en Buenos Aires, Argentina</h1>
     <p class="lead text-center animate__animated animate__fadeInUp">Una hostia consagrada sangra y revela tejido cardíaco humano. Confirmado por la ciencia moderna. Impactante, conmovedor, real.</p>
   </header>
 
@@ -84,7 +138,7 @@
       <div class="col-md-6 animate__animated animate__fadeInRight">
         <div class="highlight">
           <h2 class="h4">¿Qué pasó exactamente?</h2>
-          <p>💥 En 1996, durante una misa en Buenos Aires, una hostia fue encontrada en el suelo. El sacerdote la colocó en agua... ¡pero no se disolvió! Comenzó a transformarse en algo increíble: ¡una sustancia rojiza y viva!</p>
+          <p>En 1996, durante una misa en Buenos Aires, una hostia fue encontrada en el suelo. El sacerdote la colocó en agua... ¡pero no se disolvió! Comenzó a transformarse en algo increíble: ¡una sustancia rojiza y viva!</p>
         </div>
       </div>
     </div>
@@ -107,36 +161,32 @@
       </div>
     </div>
   </section>
-
-  <!-- SECCIÓN 3: LÍNEA DE TIEMPO -->
-  <section class="alt-section fade-in">
-    <div class="container">
-      <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Línea de tiempo del milagro</h2>
-      <div class="timeline">
-        <div class="timeline-event animate__animated animate__fadeInLeft">
-          <h5>15 de agosto de 1996</h5>
-          <p>Una hostia consagrada es hallada en el suelo de la parroquia Santa María, Buenos Aires.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInRight">
-          <h5>16-26 de agosto de 1996</h5>
-          <p>La hostia es colocada en agua para disolverse, pero en vez de eso, se transforma en una sustancia rojiza.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInLeft">
-          <h5>1999</h5>
-          <p>El entonces Arzobispo Jorge Bergoglio (hoy Papa Francisco) autoriza estudios científicos.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInRight">
-          <h5>2000</h5>
-          <p>El Dr. Ricardo Castañón y el Dr. Zugibe analizan la muestra en EE.UU. y confirman que es tejido cardíaco humano vivo.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInLeft">
-          <h5>Actualidad</h5>
-          <p>El milagro es reconocido y difundido internacionalmente, incluido en la exposición digital de Carlo Acutis.</p>
-        </div>
-      </div>
+<!-- SECCIÓN 3: LÍNEA DE TIEMPO  -->
+<section class="container py-5 fade-in">
+  <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Línea de tiempo del milagro</h2>
+  <div class="timeline">
+    <div class="timeline-event animate__animated animate__fadeInLeft">
+      <h5>15 de agosto de 1996</h5>
+      <p>Una hostia consagrada es hallada en el suelo de la parroquia Santa María, Buenos Aires.</p>
     </div>
-  </section>
-
+    <div class="timeline-event animate__animated animate__fadeInRight">
+      <h5>16-26 de agosto de 1996</h5>
+      <p>La hostia es colocada en agua para disolverse, pero en vez de eso, se transforma en una sustancia rojiza.</p>
+    </div>
+    <div class="timeline-event animate__animated animate__fadeInLeft">
+      <h5>1999</h5>
+      <p>El entonces Arzobispo Jorge Bergoglio (hoy Papa Francisco) autoriza estudios científicos.</p>
+    </div>
+    <div class="timeline-event animate__animated animate__fadeInRight">
+      <h5>2000</h5>
+      <p>El Dr. Ricardo Castañón y el Dr. Zugibe analizan la muestra en EE.UU. y confirman que es tejido cardíaco humano vivo.</p>
+    </div>
+    <div class="timeline-event animate__animated animate__fadeInLeft">
+      <h5>Actualidad</h5>
+      <p>El milagro es reconocido y difundido internacionalmente, incluido en la exposición digital de Carlo Acutis.</p>
+    </div>
+  </div>
+</section>
   <!-- SECCIÓN 4: UBICACIÓN Y CONTEXTO -->
   <section class="container py-5 fade-in">
     <div class="row align-items-center">
