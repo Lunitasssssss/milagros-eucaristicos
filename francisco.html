@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papa Francisco y los Milagros Eucarísticos | Proyecto Carlo Acutis</title>
-  <meta name="description" content="Conoce la vida, legado y testimonio del Papa Francisco, su relación con los milagros eucarísticos y su mensaje sobre la Eucaristía.">
+  <title>Papa Francisco | Proyecto Carlo Acutis</title>
+  <meta name="description" content="Conoce la vida y el mensaje del Papa Francisco y su relación con los milagros eucarísticos.">
   <meta name="keywords" content="Papa Francisco, milagros eucarísticos, Jorge Bergoglio, Eucaristía, Iglesia, fe, Carlo Acutis">
   <meta name="author" content="Luna Pajaro">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="img/favicon.png">
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,105 +20,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="styles.css">
   <style>
-    :root {
-      --main-green: #198754;
-      --main-blue: #0d6efd;
-      --main-light: #f8f9fa;
-      --main-dark: #212529;
-    }
-    body {
-      font-family: 'Poppins', 'Roboto', Arial, sans-serif;
-      background: var(--main-light);
-    }
-    .media-img { max-height: 400px; object-fit: cover; }
-    .highlight {
-      background-color: var(--main-light);
-      padding: 15px;
-      border-left: 4px solid var(--main-blue);
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .alt-section {
-      background: #f3f3f3;
-      padding: 40px 0;
-    }
-    /* Línea de tiempo tipo Milagros-Italia */
-    .timeline-container {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0;
-    }
-    .timeline-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      position: relative;
-      border-left: 3px solid var(--main-blue);
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 40px;
-      padding-left: 30px;
-    }
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-    .timeline-dot {
-      position: absolute;
-      left: -10px;
-      top: 6px;
-      width: 18px;
-      height: 18px;
-      background: var(--main-blue);
-      border-radius: 50%;
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 2px var(--main-blue);
-      z-index: 1;
-    }
-    .timeline-date {
-      font-weight: bold;
-      color: var(--main-blue);
-      margin-bottom: 2px;
-    }
-    .timeline-desc {
-      margin-bottom: 0;
-    }
-    .fact-list { padding-left: 1.2em; }
-    .fact-list li { margin-bottom: 10px; }
-    .fade-in { opacity: 0; transition: opacity 1s; }
-    .fade-in.show { opacity: 1; }
-    .header-green {
-      background: var(--main-green);
-      color: #fff;
-      padding: 32px 0 24px 0;
-      margin-top: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .header-green h1, .header-green p {
-      color: #fff !important;
-    }
-    .btn-success, .btn-info, .btn-outline-secondary, .btn-outline-danger {
-      transition: transform 0.2s;
-    }
-    .btn-success:hover, .btn-info:hover, .btn-outline-secondary:hover, .btn-outline-danger:hover {
-      transform: scale(1.05);
-    }
+    html, body { max-width: 100vw; overflow-x: hidden; }
+    body { font-family: 'Poppins', Arial, sans-serif; background: #f8f9fa; }
+    .main-section { padding: 40px 0 20px 0; }
+    .main-section img { max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px; }
+    .section-title { font-weight: 700; margin-bottom: 20px; }
+    .btn { margin-bottom: 10px; }
     @media (max-width: 767px) {
-      .media-img { max-height: 220px; }
-      .header-green { padding: 24px 0 12px 0; }
-      .timeline-item { padding-left: 22px; }
-      .timeline-dot { width: 12px; height: 12px; left: -6px; top: 7px; }
+      .main-section { padding: 24px 0 12px 0; }
+      .section-title { font-size: 1.4rem; }
     }
   </style>
 </head>
 <body>
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -138,133 +52,21 @@
     </div>
   </nav>
 
-  <!-- PORTADA VERDE -->
-  <header class="header-green text-center fade-in">
-    <div class="container">
-      <h1 class="fw-bold animate__animated animate__fadeInDown">Papa Francisco</h1>
-      <p class="lead mt-3 animate__animated animate__fadeInUp">Testigo de fe, humildad y los milagros eucarísticos en nuestro tiempo.</p>
-    </div>
-  </header>
-
-  <!-- BIOGRAFÍA Y VIDA -->
-  <section class="container py-5 fade-in">
-    <div class="row align-items-center g-5">
-      <div class="col-md-6 d-flex justify-content-center animate__animated animate__fadeInLeft">
-        <img src="img/franciscoo.jpg" alt="Papa Francisco" class="img-fluid rounded shadow media-img" loading="lazy">
-      </div>
-      <div class="col-md-6 animate__animated animate__fadeInRight d-flex flex-column justify-content-center">
-        <div class="highlight">
-          <h2 class="fw-bold">¿Quién es el Papa Francisco?</h2>
-          <p>Nacido como Jorge Mario Bergoglio en Buenos Aires en 1936, Francisco es el primer Papa latinoamericano y jesuita de la historia. Su humildad, cercanía y amor por los pobres han conmovido al mundo.</p>
-          <ul class="fact-list">
-            <li>Ordenado sacerdote en 1969.</li>
-            <li>Arzobispo de Buenos Aires desde 1998.</li>
-            <li>Elegido Papa el 13 de marzo de 2013.</li>
-            <li>Conocido por su sencillez, su defensa de la justicia social y su llamado a la misericordia.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LÍNEA DE TIEMPO -->
-  <section class="container py-5 fade-in">
-    <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Línea de tiempo de Francisco</h2>
-    <div class="timeline-container">
-      <ul class="timeline-list">
-        <li class="timeline-item animate__animated animate__fadeInLeft">
-          <span class="timeline-dot"></span>
-          <div class="timeline-date">1936</div>
-          <div class="timeline-desc">Nace en Buenos Aires, Argentina.</div>
-        </li>
-        <li class="timeline-item animate__animated animate__fadeInRight">
-          <span class="timeline-dot"></span>
-          <div class="timeline-date">1969</div>
-          <div class="timeline-desc">Es ordenado sacerdote jesuita.</div>
-        </li>
-        <li class="timeline-item animate__animated animate__fadeInLeft">
-          <span class="timeline-dot"></span>
-          <div class="timeline-date">1998</div>
-          <div class="timeline-desc">Nombrado Arzobispo de Buenos Aires.</div>
-        </li>
-        <li class="timeline-item animate__animated animate__fadeInRight">
-          <span class="timeline-dot"></span>
-          <div class="timeline-date">2013</div>
-          <div class="timeline-desc">Es elegido Papa, tomando el nombre de Francisco.</div>
-        </li>
-        <li class="timeline-item animate__animated animate__fadeInLeft">
-          <span class="timeline-dot"></span>
-          <div class="timeline-date">2013-Actualidad</div>
-          <div class="timeline-desc">Promueve la misericordia, la paz, el cuidado de la creación y la centralidad de la Eucaristía.</div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- MILAGRO DE BUENOS AIRES -->
-  <section class="container py-5 fade-in">
-    <h3 class="fw-bold text-center mb-5 animate__animated animate__fadeInDown">Milagro Eucarístico de Buenos Aires (1996)</h3>
-    <div class="row align-items-center g-5">
-      <div class="col-md-6 d-flex justify-content-center animate__animated animate__fadeInLeft">
-        <img src="img/milagroobsass.jpg" alt="Milagro Buenos Aires" class="img-fluid rounded shadow media-img" loading="lazy">
-      </div>
-      <div class="col-md-6 animate__animated animate__fadeInRight d-flex flex-column justify-content-center">
-        <div class="highlight">
-          <p>Una hostia consagrada cayó al suelo y, luego de ser preservada en agua, comenzó a sangrar. Bergoglio, como arzobispo, ordenó una investigación profunda. Los análisis revelaron tejido cardíaco humano, con signos de agonía intensa, sangre tipo AB. Este fenómeno reforzó el llamado a valorar el don de la Eucaristía.</p>
-          <a href="Milagros-argentina.html" class="btn btn-success mt-3">Leer más sobre el milagro</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENSEÑANZA Y FRASES -->
-  <section class="bg-light py-5 fade-in">
-    <div class="container text-center">
-      <h3 class="fw-bold mb-4 animate__animated animate__fadeInDown">Palabras del Papa sobre la Eucaristía</h3>
-      <blockquote class="blockquote animate__animated animate__fadeIn">
-        <p>"La Eucaristía es el corazón de la Iglesia. Nos une a Jesús y nos enseña a amar como Él amó."</p>
-      </blockquote>
-      <p class="text-muted">Papa Francisco</p>
-      <blockquote class="blockquote animate__animated animate__fadeIn">
-        <p>"No nos cansemos de recibir la Eucaristía, porque en ella encontramos la fuerza para vivir cada día."</p>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ÚLTIMOS DÍAS Y SU MUERTE -->
-  <section class="container py-5 fade-in">
-    <div class="row align-items-center g-5">
-      <div class="col-md-6 d-flex justify-content-center animate__animated animate__fadeInLeft">
-        <img src="img/papaultimosdias.jpg" alt="Papa Francisco en sus últimos días" class="img-fluid rounded shadow media-img" loading="lazy">
-      </div>
-      <div class="col-md-6 animate__animated animate__fadeInRight d-flex flex-column justify-content-center">
-        <div class="highlight">
-          <h2 class="h4">Sus últimos días y legado</h2>
-          <p>
-            En sus últimos años, el Papa Francisco continuó predicando la esperanza, la paz y la importancia de la Eucaristía, incluso en medio de dificultades de salud. Su testimonio de fe, humildad y entrega ha dejado una huella imborrable en la Iglesia y el mundo.
-          </p>
-          <ul class="fact-list">
-            <li>Enfrentó problemas de salud con fortaleza y serenidad.</li>
-            <li>Dejó mensajes de reconciliación y unidad hasta el final.</li>
-            <li>Su muerte fue recibida con profundo dolor y gratitud por millones de fieles.</li>
-            <li>Su legado vive en sus escritos, gestos y en la renovación espiritual que impulsó.</li>
-          </ul>
-          <blockquote class="blockquote mt-3">
-            <p class="mb-0">"La esperanza es audaz, sabe mirar más allá de la comodidad personal, de las pequeñas seguridades y compensaciones que estrechan el horizonte, para abrirse a grandes ideales que hacen la vida más bella y digna."</p>
-            <footer class="blockquote-footer text-end">Papa Francisco</footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RECURSOS Y ENLACES -->
-  <section class="alt-section fade-in">
-    <div class="container text-center">
-      <h3 class="fw-bold mb-4 animate__animated animate__fadeInDown">Recursos y enlaces</h3>
-      <a href="https://www.vatican.va/content/francesco/es.html" target="_blank" rel="noopener" class="btn btn-info m-2">Biografía oficial en el Vaticano</a>
-      <a href="https://www.miracolieucaristici.org/" target="_blank" rel="noopener" class="btn btn-success m-2">Exposición digital de Carlo Acutis</a>
-      <a href="milagros.html" class="btn btn-outline-secondary m-2">← Volver a la galería de milagros</a>
+  <!-- CONTENIDO PRINCIPAL -->
+  <section class="container main-section text-center fade-in">
+    <h1 class="section-title animate__animated animate__fadeInDown">Papa Francisco</h1>
+    <img src="img/franciscoo.jpg" alt="Papa Francisco" class="img-fluid shadow animate__animated animate__fadeIn">
+    <p class="lead animate__animated animate__fadeInUp">
+      Jorge Mario Bergoglio, nacido en Buenos Aires, es el primer Papa latinoamericano y jesuita. Su humildad, cercanía y amor por los pobres han conmovido al mundo. Como arzobispo, promovió la investigación del milagro eucarístico de Buenos Aires.
+    </p>
+    <blockquote class="blockquote my-4 animate__animated animate__fadeIn">
+      <p>"La Eucaristía es el corazón de la Iglesia. Nos une a Jesús y nos enseña a amar como Él amó."</p>
+      <footer class="blockquote-footer">Papa Francisco</footer>
+    </blockquote>
+    <div>
+      <a href="https://www.vatican.va/content/francesco/es.html" target="_blank" rel="noopener" class="btn btn-info">Biografía oficial en el Vaticano</a>
+      <a href="https://www.miracolieucaristici.org/" target="_blank" rel="noopener" class="btn btn-success">Exposición digital de Carlo Acutis</a>
+      <a href="milagros.html" class="btn btn-outline-secondary">← Volver a la galería de milagros</a>
     </div>
   </section>
 
