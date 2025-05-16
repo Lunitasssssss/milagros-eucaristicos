@@ -262,3 +262,20 @@ h2 {
     padding: 2rem 1rem;
   }
 }
+
+header {
+  padding-top: calc(3rem + 56px); /* 56px del navbar + espacio adicional */
+  padding-bottom: 3rem;
+  margin-top: 56px; /* Asegura que el header comience después del navbar */
+  background-color: #198754;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding-top: calc(2rem + 56px);
+    padding-bottom: 2rem;
+  }
+}
+
