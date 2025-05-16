@@ -7,6 +7,8 @@
   <meta name="description" content="Descubre el milagro eucarístico de Lanciano, Italia: la hostia y el vino convertidos en carne y sangre humana, confirmados por la ciencia. Inspirado en Carlo Acutis.">
   <meta name="keywords" content="milagro eucarístico, Lanciano, Italia, Carlo Acutis, hostia, sangre, ciencia, fe, iglesia, catolicismo">
   <meta name="author" content="Luna Pajaro">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
@@ -17,14 +19,12 @@
   <!-- Animaciones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="styles.css">
-  <head>
- <head>
   <style>
     .media-img, .media-video {
       width: 100%;
       max-width: 800px;
       height: 440px;
-      object-fit: contain; 
+      object-fit: contain;
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -60,14 +60,21 @@
         height: 180px;
       }
     }
+    .fact-list li { margin-bottom: 10px; }
+    .timeline { border-left: 3px solid #0d6efd; margin-left: 20px; padding-left: 20px; }
+    .timeline-event { margin-bottom: 30px; }
+    .timeline-event h5 { color: #0d6efd; }
+    .fade-in { opacity: 0; transition: opacity 1s; }
+    .fade-in.show { opacity: 1; }
+    .navbar.scrolled { background: #145a32 !important; transition: background 0.3s; }
   </style>
 </head>
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Menú principal">
     <div class="container">
       <a class="navbar-brand" href="index.html">Ciberapostol de la Eucaristía</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -92,7 +99,7 @@
   <section class="container py-5 fade-in">
     <div class="row align-items-center">
       <div class="col-md-6 animate__animated animate__fadeInLeft">
-        <img src="Imagenes/relicario.jpg" alt="Relicario de Lanciano" class="img-fluid rounded shadow media-img">
+        <img src="img/relicario.jpg" alt="Relicario de Lanciano" class="img-fluid rounded shadow media-img" loading="lazy">
       </div>
       <div class="col-md-6 animate__animated animate__fadeInRight">
         <div class="highlight">
@@ -141,7 +148,7 @@
   <section class="container py-5 fade-in">
     <div class="row align-items-center">
       <div class="col-md-6 order-md-2 animate__animated animate__fadeInRight">
-        <img src="Imagenes/milagrolancioo.JPG" alt="Reliquia del milagro de Lanciano" class="img-fluid rounded shadow media-img">
+        <img src="img/milagrolancioo.JPG" alt="Reliquia del milagro de Lanciano" class="img-fluid rounded shadow media-img" loading="lazy">
       </div>
       <div class="col-md-6 order-md-1 animate__animated animate__fadeInLeft">
         <div class="highlight">
@@ -164,7 +171,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 animate__animated animate__fadeInLeft">
-          <img src="Imagenes/milagrolancioosangre.jpg" alt="Animación del milagro de Lanciano" class="img-fluid rounded shadow media-img">
+          <img src="img/milagrolancioosangre.jpg" alt="Animación del milagro de Lanciano" class="img-fluid rounded shadow media-img" loading="lazy">
         </div>
         <div class="col-md-6 animate__animated animate__fadeInRight">
           <h2 class="h4">¿Por qué es tan importante?</h2>
@@ -189,7 +196,7 @@
       <h2 class="h4 animate__animated animate__fadeInUp">📹 Testimonio audiovisual</h2>
       <p class="animate__animated animate__fadeIn">Descubre más sobre el milagro de Lanciano en este video documental.</p>
       <div class="ratio ratio-16x9 mb-3">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IROyvW-as-8?si=xPd1VFaMg6uqyhkB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/IROyvW-as-8?si=xPd1VFaMg6uqyhkB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <a href="https://www.miracolieucaristici.org/" target="_blank" rel="noopener" class="btn btn-info mt-2">Ver exposición digital de Carlo Acutis</a>
     </div>

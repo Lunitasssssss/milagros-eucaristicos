@@ -7,6 +7,8 @@
   <meta name="description" content="Dejanos tu mensaje, recomendación o consulta sobre milagros eucarísticos, Carlo Acutis y la fe. También encontranos en redes sociales.">
   <meta name="keywords" content="contacto, Carlo Acutis, milagros eucarísticos, mensaje, recomendación, redes sociales, Instagram, YouTube">
   <meta name="author" content="Luna Pajaro">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -18,12 +20,83 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body { font-family: 'Poppins', sans-serif; background: #f7fafd; }
-    .highlight { background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%); padding: 18px; border-left: 4px solid #0d6efd; margin-bottom: 20px; }
-    .social-icon { font-size: 2rem; margin: 0 10px; color: #0d6efd; transition: color 0.2s; }
-    .social-icon:hover { color: #198754; }
+    :root {
+      --main-blue: #0d6efd;
+      --main-green: #198754;
+      --main-light: #f7fafd;
+      --main-gradient: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
+    }
+    body { font-family: 'Poppins', sans-serif; background: var(--main-light); }
+    .highlight {
+      background: var(--main-gradient);
+      padding: 18px;
+      border-left: 4px solid var(--main-blue);
+      margin-bottom: 20px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .modern-shadow { box-shadow: 0 4px 24px 0 rgba(13,110,253,0.08); }
     .fade-in { opacity: 0; transition: opacity 1s; }
     .fade-in.show { opacity: 1; }
+    .social-icon { font-size: 2rem; margin: 0 10px; color: var(--main-blue); transition: color 0.2s; vertical-align: middle; }
+    .social-icon:hover { color: var(--main-green); }
+    .contact-hero {
+      background: #fff;
+      border-bottom: 1px solid #e3e6ea;
+      padding: 56px 0 40px 0;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-hero h1, .contact-hero p {
+      color: #222;
+    }
+    .contact-form {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px 0 rgba(13,110,253,0.08);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .btn-success, .btn-info, .btn-outline-secondary {
+      transition: transform 0.2s;
+    }
+    .btn-success:hover, .btn-info:hover, .btn-outline-secondary:hover {
+      transform: scale(1.04);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+    @media (max-width: 767px) {
+      .contact-hero { padding: 32px 0 20px 0; }
+      .contact-form { padding: 1.5rem 0.5rem; }
+    }
+    .alert-gracias {
+      display: none;
+      margin-bottom: 1.5rem;
+    }
+    .alert-gracias.show {
+      display: block;
+      animation: fadeInDown 1s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 
@@ -49,58 +122,63 @@
   </nav>
 
   <!-- HERO CONTACTO -->
-  <header class="bg-white py-5 fade-in" style="margin-top:56px; border-bottom: 1px solid #e3e6ea;">
+  <header class="contact-hero fade-in">
     <div class="container text-center">
       <h1 class="fw-bold display-5 mb-3 text-gradient animate__animated animate__fadeInDown" style="background: linear-gradient(90deg, #0d6efd 0%, #67e8f9 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
-              ¡Queremos escucharte!
-            </h1>
+        ¡Queremos escucharte!
+      </h1>
       <p class="lead text-secondary animate__animated animate__fadeInUp" style="max-width: 600px; margin: 0 auto;">
         Dejanos tu mensaje, recomendación o consulta. Este espacio es para jóvenes, familias y todos los que buscan compartir, preguntar o sumar ideas sobre la fe, Carlo Acutis y los milagros eucarísticos.
       </p>
     </div>
   </header>
 
-  <!-- FORMULARIO DE CONTACTO -->
+  <!-- FORMULARIO Y REDES EN GRID -->
   <section class="container py-5 fade-in">
-    <div class="row justify-content-center">
-      <div class="col-lg-7">
+    <div class="contact-grid">
+      <!-- Formulario -->
+      <div>
         <div class="highlight mb-4 text-center">
           <h2 class="fw-bold mb-2">¿Tenés una sugerencia, testimonio o recomendación?</h2>
           <p class="mb-0">¡Tu aporte puede ayudar a otros! Completá el formulario y sumate a la comunidad.</p>
         </div>
-        <form action="https://formsubmit.co/TU-CORREO@gmail.com" method="POST" class="modern-shadow bg-white p-4 rounded-4">
-          <div class="mb-3">
+        <div id="gracias" class="alert alert-success alert-gracias" role="alert">
+          ¡Gracias por tu mensaje! Te responderemos pronto.
+        </div>
+        <form id="contactForm" action="#" method="POST" class="contact-form" autocomplete="off">
+          <div>
             <label for="nombre" class="form-label">Nombre completo</label>
             <input type="text" name="nombre" id="nombre" class="form-control" required>
           </div>
-          <div class="mb-3">
+          <div>
             <label for="email" class="form-label">Correo electrónico</label>
             <input type="email" name="email" id="email" class="form-control" required>
           </div>
-          <div class="mb-3">
+          <div>
             <label for="mensaje" class="form-label">Tu mensaje, recomendación o testimonio</label>
             <textarea name="mensaje" id="mensaje" class="form-control" rows="5" required></textarea>
           </div>
           <button type="submit" class="btn btn-success w-100">Enviar mensaje</button>
-          <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
         </form>
       </div>
-    </div>
-  </section>
-
-  <!-- REDES SOCIALES -->
-  <section class="container py-4 fade-in">
-    <div class="text-center">
-      <h3 class="fw-bold mb-3">Seguinos en redes sociales</h3>
-      <a href="https://instagram.com/pajaroproducciones" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram @pajaroproducciones">
-        <svg width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3c1.657 0 1.85.006 2.497.036.647.03 1.084.137 1.34.23.32.112.548.247.788.487.24.24.375.468.487.788.093.256.2.693.23 1.34C12.994 6.15 13 6.343 13 8c0 1.657-.006 1.85-.036 2.497-.03.647-.137 1.084-.23 1.34a1.785 1.785 0 0 1-.487.788 1.785 1.785 0 0 1-.788.487c-.256.093-.693.2-1.34.23C9.85 12.994 9.657 13 8 13c-1.657 0-1.85-.006-2.497-.036-.647-.03-1.084-.137-1.34-.23a1.785 1.785 0 0 1-.788-.487 1.785 1.785 0 0 1-.487-.788c-.093-.256-.2-.693-.23-1.34C3.006 9.85 3 9.657 3 8c0-1.657.006-1.85.036-2.497.03-.647.137-1.084.23-1.34a1.785 1.785 0 0 1 .487-.788 1.785 1.785 0 0 1 .788-.487c.256-.093.693-.2 1.34-.23C6.15 3.006 6.343 3 8 3zm0-1C6.326 2 6.102 2.007 5.354 2.037c-.748.03-1.26.14-1.708.297a3.785 3.785 0 0 0-1.356.89A3.785 3.785 0 0 0 2.334 4.646c-.157.448-.267.96-.297 1.708C2.007 6.102 2 6.326 2 8c0 1.674.007 1.898.037 2.646.03.748.14 1.26.297 1.708.17.48.41.91.89 1.356.446.48.876.72 1.356.89.448.157.96.267 1.708.297C6.102 13.993 6.326 14 8 14c1.674 0 1.898-.007 2.646-.037.748-.03 1.26-.14 1.708-.297a3.785 3.785 0 0 0 1.356-.89 3.785 3.785 0 0 0 .89-1.356c.157-.448.267-.96.297-1.708.03-.748.037-.972.037-2.646 0-1.674-.007-1.898-.037-2.646-.03-.748-.14-1.26-.297-1.708a3.785 3.785 0 0 0-.89-1.356 3.785 3.785 0 0 0-1.356-.89c-.448-.157-.96-.267-1.708-.297C9.898 2.007 9.674 2 8 2z"/><path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/></svg>
-      </a>
-      <a href="https://youtu.be/S_6dpy5FuS0" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube Luna ptak">
-        <svg width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h-.002C3.73 1.999 1.999 3.73 1.999 8.051v.002c0 4.321 1.731 6.052 6.05 6.052h.002c4.321 0 6.052-1.731 6.052-6.052v-.002c0-4.321-1.731-6.052-6.052-6.052zm0 1.2c3.53 0 4.852 1.322 4.852 4.852v.002c0 3.53-1.322 4.852-4.852 4.852h-.002c-3.53 0-4.852-1.322-4.852-4.852v-.002c0-3.53 1.322-4.852 4.852-4.852zm-1.05 2.8v4.4l3.6-2.2-3.6-2.2z"/></svg>
-      </a>
-      <div class="mt-2">
-        <span class="d-block">Instagram: <a href="https://instagram.com/pajaroproducciones" target="_blank" rel="noopener">@pajaroproducciones</a></span>
-        <span class="d-block">YouTube: <a href="https://youtu.be/S_6dpy5FuS0" target="_blank" rel="noopener">Luna ptak</a></span>
+      <!-- Redes sociales -->
+      <div>
+        <div class="highlight mb-4 text-center">
+          <h2 class="fw-bold mb-2">Seguinos en redes sociales</h2>
+          <p class="mb-0">Sumate a la comunidad y compartí tu experiencia.</p>
+        </div>
+        <div class="text-center mb-3">
+          <a href="https://instagram.com/pajaroproducciones" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram @pajaroproducciones">
+            <svg width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16"><path d="M8 3c1.657 0 1.85.006 2.497.036.647.03 1.084.137 1.34.23.32.112.548.247.788.487.24.24.375.468.487.788.093.256.2.693.23 1.34C12.994 6.15 13 6.343 13 8c0 1.657-.006 1.85-.036 2.497-.03.647-.137 1.084-.23 1.34a1.785 1.785 0 0 1-.487.788 1.785 1.785 0 0 1-.788.487c-.256.093-.693.2-1.34.23C9.85 12.994 9.657 13 8 13c-1.657 0-1.85-.006-2.497-.036-.647-.03-1.084-.137-1.34-.23a1.785 1.785 0 0 1-.788-.487 1.785 1.785 0 0 1-.487-.788c-.093-.256-.2-.693-.23-1.34C3.006 9.85 3 9.657 3 8c0-1.657.006-1.85.036-2.497.03-.647.137-1.084.23-1.34a1.785 1.785 0 0 1 .487-.788 1.785 1.785 0 0 1 .788-.487c.256-.093.693-.2 1.34-.23C6.15 3.006 6.343 3 8 3zm0-1C6.326 2 6.102 2.007 5.354 2.037c-.748.03-1.26.14-1.708.297a3.785 3.785 0 0 0-1.356.89A3.785 3.785 0 0 0 2.334 4.646c-.157.448-.267.96-.297 1.708C2.007 6.102 2 6.326 2 8c0 1.674.007 1.898.037 2.646.03.748.14 1.26.297 1.708.17.48.41.91.89 1.356.446.48.876.72 1.356.89.448.157.96.267 1.708.297C6.102 13.993 6.326 14 8 14c1.674 0 1.898-.007 2.646-.037.748-.03 1.26-.14 1.708-.297a3.785 3.785 0 0 0 1.356-.89 3.785 3.785 0 0 0 .89-1.356c.157-.448.267-.96.297-1.708.03-.748.037-.972.037-2.646 0-1.674-.007-1.898-.037-2.646-.03-.748-.14-1.26-.297-1.708a3.785 3.785 0 0 0-.89-1.356 3.785 3.785 0 0 0-1.356-.89c-.448-.157-.96-.267-1.708-.297C9.898 2.007 9.674 2 8 2z"/><path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm4.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/></svg>
+          </a>
+          <a href="https://youtu.be/S_6dpy5FuS0" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube Luna ptak">
+            <svg width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h-.002C3.73 1.999 1.999 3.73 1.999 8.051v.002c0 4.321 1.731 6.052 6.05 6.052h.002c4.321 0 6.052-1.731 6.052-6.052v-.002c0-4.321-1.731-6.052-6.052-6.052zm0 1.2c3.53 0 4.852 1.322 4.852 4.852v.002c0 3.53-1.322 4.852-4.852 4.852h-.002c-3.53 0-4.852-1.322-4.852-4.852v-.002c0-3.53 1.322-4.852 4.852-4.852zm-1.05 2.8v4.4l3.6-2.2-3.6-2.2z"/></svg>
+          </a>
+          <div class="mt-2">
+            <span class="d-block">Instagram: <a href="https://instagram.com/pajaroproducciones" target="_blank" rel="noopener">@pajaroproducciones</a></span>
+            <span class="d-block">YouTube: <a href="https://youtu.be/S_6dpy5FuS0" target="_blank" rel="noopener">Luna ptak</a></span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -132,6 +210,22 @@
     }
     window.addEventListener('scroll', checkFadeIn);
     window.addEventListener('load', checkFadeIn);
+
+    // Mostrar mensaje de gracias al enviar el formulario (sin recargar)
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      const gracias = document.getElementById('gracias');
+      if(form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          form.reset();
+          gracias.classList.add('show');
+          setTimeout(() => {
+            gracias.classList.remove('show');
+          }, 5000);
+        });
+      }
+    });
   </script>
 </body>
 </html>

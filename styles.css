@@ -116,3 +116,19 @@ h2 {
   transform: scale(1.1); /* Aumenta ligeramente el tamaño */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
 }
+
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: 2rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

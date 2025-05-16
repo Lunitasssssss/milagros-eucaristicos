@@ -7,6 +7,8 @@
   <meta name="description" content="Explora los milagros eucarísticos reconocidos por la Iglesia. Descubre testimonios de fe y ciencia, inspirados por Carlo Acutis.">
   <meta name="keywords" content="milagros eucarísticos, Carlo Acutis, fe, iglesia, catolicismo, ciencia, testimonios">
   <meta name="author" content="Luna Pajaro">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
@@ -18,11 +20,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .card-img-top { height: 220px; object-fit: cover; }
+    .card-img-top { height: 220px; object-fit: contain; background: #fff; }
     .fade-in { opacity: 0; transition: opacity 1s; }
     .fade-in.show { opacity: 1; }
     .navbar.scrolled { background: #145a32 !important; transition: background 0.3s; }
     .section-title { letter-spacing: 1px; }
+    .card-title { font-size: 1.2rem; font-weight: 700; }
+    .card-text { font-size: 1rem; }
+    .btn-success { transition: transform 0.2s; }
+    .btn-success:hover { transform: scale(1.05); }
     @media (max-width: 767px) {
       .card-img-top { height: 150px; }
     }
@@ -30,10 +36,10 @@
 </head>
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Menú principal">
     <div class="container">
       <a class="navbar-brand" href="index.html">Ciberapostol de la Eucaristía</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,22 +55,22 @@
   </nav>
 
   <!-- TÍTULO Y BÚSQUEDA -->
-<header class="container py-5 fade-in" style="margin-top:80px;">
-  <h1 class="fw-bold text-center section-title mb-3 animate__animated animate__fadeInDown">Galería de Milagros Eucarísticos</h1>
-  <div class="mx-auto mb-4" style="max-width: 700px;">
-    <div class="p-3 rounded shadow-sm" style="background: #f7fbe9; border-left: 5px solid #388e3c;">
-      <p class="lead text-center mb-0" style="color: #145a32;">
-        Explora los milagros eucarísticos reconocidos por la Iglesia en todo el mundo.<br>
-        <span style="font-size:1.05em;">Utiliza el buscador para filtrar por país o ciudad.</span>
-      </p>
+  <header class="container py-5 fade-in" style="margin-top:80px;">
+    <h1 class="fw-bold text-center section-title mb-3 animate__animated animate__fadeInDown">Galería de Milagros Eucarísticos</h1>
+    <div class="mx-auto mb-4" style="max-width: 700px;">
+      <div class="p-3 rounded shadow-sm" style="background: #f7fbe9; border-left: 5px solid #388e3c;">
+        <p class="lead text-center mb-0" style="color: #145a32;">
+          Explora los milagros eucarísticos reconocidos por la Iglesia en todo el mundo.<br>
+          <span style="font-size:1.05em;">Utiliza el buscador para filtrar por país o ciudad.</span>
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="row justify-content-center mb-3">
-    <div class="col-md-6">
-      <input type="text" id="buscador" class="form-control form-control-lg" placeholder="Buscar milagro por país o ciudad..." aria-label="Buscar milagro por país o ciudad">
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-6">
+        <input type="text" id="buscador" class="form-control form-control-lg" placeholder="Buscar milagro por país o ciudad..." aria-label="Buscar milagro por país o ciudad">
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <!-- GALERÍA DE MILAGROS -->
   <main>
@@ -73,38 +79,38 @@
 
         <!-- MILAGRO ARGENTINA -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-lg animate__animated animate__fadeInUp">
-            <img src="Imagenes/argentina.jpg" class="card-img-top" alt="Milagro en Buenos Aires, Argentina">
+          <article class="card h-100 shadow-lg animate__animated animate__fadeInUp">
+            <img src="img/argentina.jpg" class="card-img-top" alt="Milagro en Buenos Aires, Argentina" loading="lazy">
             <div class="card-body">
-              <h5 class="card-title">Buenos Aires, Argentina</h5>
+              <h2 class="card-title h5">Buenos Aires, Argentina</h2>
               <p class="card-text">Una hostia sangrante fue analizada y se descubrió que contenía tejido cardíaco humano con signos de sufrimiento.</p>
-              <a href="Milagros-argentina.html" class="btn btn-success w-100 animate__animated animate__pulse animate__infinite" aria-label="Ver más sobre el milagro de Argentina">Ver más</a>
+              <a href="Milagros-argentina.html" class="btn btn-success w-100 animate__animated animate__pulse animate__infinite" aria-label="Ver más sobre el milagro de Argentina" rel="noopener">Ver más</a>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- MILAGRO ITALIA -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-lg animate__animated animate__fadeInUp">
-            <img src="Imagenes/italia.jpg" class="card-img-top" alt="Milagro en Lanciano, Italia">
+          <article class="card h-100 shadow-lg animate__animated animate__fadeInUp">
+            <img src="img/italia.jpg" class="card-img-top" alt="Milagro en Lanciano, Italia" loading="lazy">
             <div class="card-body">
-              <h5 class="card-title">Lanciano, Italia</h5>
+              <h2 class="card-title h5">Lanciano, Italia</h2>
               <p class="card-text">En el siglo VIII, una hostia se convirtió visiblemente en carne y el vino en sangre humana, conservados hasta hoy.</p>
-              <a href="Milagros-Italia.html" class="btn btn-success w-100 animate__animated animate__pulse animate__infinite" aria-label="Ver más sobre el milagro de Italia">Ver más</a>
+              <a href="Milagros-Italia.html" class="btn btn-success w-100 animate__animated animate__pulse animate__infinite" aria-label="Ver más sobre el milagro de Italia" rel="noopener">Ver más</a>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- MILAGRO MÉXICO -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-lg animate__animated animate__fadeInUp">
-            <img src="Imagenes/mexico.jpg" class="card-img-top" alt="Milagro en Tixtla, México">
+          <article class="card h-100 shadow-lg animate__animated animate__fadeInUp">
+            <img src="img/mexico.jpg" class="card-img-top" alt="Milagro en Tixtla, México" loading="lazy">
             <div class="card-body">
-              <h5 class="card-title">Tixtla, México</h5>
+              <h2 class="card-title h5">Tixtla, México</h2>
               <p class="card-text">Una hostia consagrada comenzó a sangrar durante una misa. Estudios revelaron sangre tipo AB y tejido humano.</p>
-              <a href="milagro-mexico.html" class="btn btn-success w-100 animate__animated animate__pulse animate__infinite" aria-label="Ver más sobre el milagro de México">Ver más</a>
+              <a href="milagro-mexico.html" class="btn btn-success w-100 animate__animated animate__pulse animate__infinite" aria-label="Ver más sobre el milagro de México" rel="noopener">Ver más</a>
             </div>
-          </div>
+          </article>
         </div>
 
       </div>
@@ -150,7 +156,7 @@
 
     // Buscador de milagros
     const buscador = document.getElementById('buscador');
-    const tarjetas = document.querySelectorAll('#contenedor-milagros .card');
+    const tarjetas = document.querySelectorAll('#contenedor-milagros .card, #contenedor-milagros article');
     buscador.addEventListener('input', () => {
       const valor = buscador.value.toLowerCase();
       tarjetas.forEach(card => {

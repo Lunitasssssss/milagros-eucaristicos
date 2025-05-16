@@ -7,6 +7,8 @@
   <meta name="description" content="Conoce la vida, legado y testimonio del Papa Francisco, su relación con los milagros eucarísticos y su mensaje sobre la Eucaristía.">
   <meta name="keywords" content="Papa Francisco, milagros eucarísticos, Jorge Bergoglio, Eucaristía, Iglesia, fe, Carlo Acutis">
   <meta name="author" content="Luna Pajaro">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
@@ -18,25 +20,101 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="styles.css">
   <style>
+    :root {
+      --main-green: #198754;
+      --main-blue: #0d6efd;
+      --main-light: #f8f9fa;
+      --main-dark: #212529;
+    }
+    body {
+      font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+      background: var(--main-light);
+    }
     .media-img { max-height: 400px; object-fit: cover; }
-    .highlight { background-color: #f8f9fa; padding: 15px; border-left: 4px solid #0d6efd; margin-bottom: 20px; }
-    .alt-section { background: #f3f3f3; padding: 40px 0; }
-    .timeline { border-left: 3px solid #0d6efd; margin-left: 20px; padding-left: 20px; }
-    .timeline-event { margin-bottom: 30px; }
-    .timeline-event h5 { color: #0d6efd; }
+    .highlight {
+      background-color: var(--main-light);
+      padding: 15px;
+      border-left: 4px solid var(--main-blue);
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .alt-section {
+      background: #f3f3f3;
+      padding: 40px 0;
+    }
+    /* Línea de tiempo tipo Milagros-Italia */
+    .timeline-container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .timeline-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      border-left: 3px solid var(--main-blue);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 30px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -10px;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      background: var(--main-blue);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--main-blue);
+      z-index: 1;
+    }
+    .timeline-date {
+      font-weight: bold;
+      color: var(--main-blue);
+      margin-bottom: 2px;
+    }
+    .timeline-desc {
+      margin-bottom: 0;
+    }
+    .fact-list { padding-left: 1.2em; }
     .fact-list li { margin-bottom: 10px; }
     .fade-in { opacity: 0; transition: opacity 1s; }
     .fade-in.show { opacity: 1; }
     .header-green {
-      background: #198754;
+      background: var(--main-green);
       color: #fff;
-      padding: 64px 0 40px 0;
+      padding: 32px 0 24px 0;
       margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .header-green h1, .header-green p {
       color: #fff !important;
     }
-    @media (max-width: 767px) { .media-img { max-height: 220px; } }
+    .btn-success, .btn-info, .btn-outline-secondary, .btn-outline-danger {
+      transition: transform 0.2s;
+    }
+    .btn-success:hover, .btn-info:hover, .btn-outline-secondary:hover, .btn-outline-danger:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 767px) {
+      .media-img { max-height: 220px; }
+      .header-green { padding: 24px 0 12px 0; }
+      .timeline-item { padding-left: 22px; }
+      .timeline-dot { width: 12px; height: 12px; left: -6px; top: 7px; }
+    }
   </style>
 </head>
 <body>
@@ -70,11 +148,11 @@
 
   <!-- BIOGRAFÍA Y VIDA -->
   <section class="container py-5 fade-in">
-    <div class="row align-items-center">
-      <div class="col-md-6 animate__animated animate__fadeInLeft">
-        <img src="Imagenes/franciscoo.jpg" alt="Papa Francisco" class="img-fluid rounded shadow media-img">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 d-flex justify-content-center animate__animated animate__fadeInLeft">
+        <img src="img/franciscoo.jpg" alt="Papa Francisco" class="img-fluid rounded shadow media-img" loading="lazy">
       </div>
-      <div class="col-md-6 animate__animated animate__fadeInRight">
+      <div class="col-md-6 animate__animated animate__fadeInRight d-flex flex-column justify-content-center">
         <div class="highlight">
           <h2 class="fw-bold">¿Quién es el Papa Francisco?</h2>
           <p>Nacido como Jorge Mario Bergoglio en Buenos Aires en 1936, Francisco es el primer Papa latinoamericano y jesuita de la historia. Su humildad, cercanía y amor por los pobres han conmovido al mundo.</p>
@@ -90,42 +168,47 @@
   </section>
 
   <!-- LÍNEA DE TIEMPO -->
-  <section class="alt-section fade-in">
-    <div class="container">
-      <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Línea de tiempo de Francisco</h2>
-      <div class="timeline">
-        <div class="timeline-event animate__animated animate__fadeInLeft">
-          <h5>1936</h5>
-          <p>Nace en Buenos Aires, Argentina.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInRight">
-          <h5>1969</h5>
-          <p>Es ordenado sacerdote jesuita.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInLeft">
-          <h5>1998</h5>
-          <p>Nombrado Arzobispo de Buenos Aires.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInRight">
-          <h5>2013</h5>
-          <p>Es elegido Papa, tomando el nombre de Francisco.</p>
-        </div>
-        <div class="timeline-event animate__animated animate__fadeInLeft">
-          <h5>2013-Actualidad</h5>
-          <p>Promueve la misericordia, la paz, el cuidado de la creación y la centralidad de la Eucaristía.</p>
-        </div>
-      </div>
+  <section class="container py-5 fade-in">
+    <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Línea de tiempo de Francisco</h2>
+    <div class="timeline-container">
+      <ul class="timeline-list">
+        <li class="timeline-item animate__animated animate__fadeInLeft">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">1936</div>
+          <div class="timeline-desc">Nace en Buenos Aires, Argentina.</div>
+        </li>
+        <li class="timeline-item animate__animated animate__fadeInRight">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">1969</div>
+          <div class="timeline-desc">Es ordenado sacerdote jesuita.</div>
+        </li>
+        <li class="timeline-item animate__animated animate__fadeInLeft">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">1998</div>
+          <div class="timeline-desc">Nombrado Arzobispo de Buenos Aires.</div>
+        </li>
+        <li class="timeline-item animate__animated animate__fadeInRight">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">2013</div>
+          <div class="timeline-desc">Es elegido Papa, tomando el nombre de Francisco.</div>
+        </li>
+        <li class="timeline-item animate__animated animate__fadeInLeft">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">2013-Actualidad</div>
+          <div class="timeline-desc">Promueve la misericordia, la paz, el cuidado de la creación y la centralidad de la Eucaristía.</div>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- MILAGRO DE BUENOS AIRES -->
   <section class="container py-5 fade-in">
     <h3 class="fw-bold text-center mb-5 animate__animated animate__fadeInDown">Milagro Eucarístico de Buenos Aires (1996)</h3>
-    <div class="row align-items-center">
-      <div class="col-md-6 animate__animated animate__fadeInLeft">
-        <img src="Imagenes/milagroobsass.jpg" alt="Milagro Buenos Aires" class="img-fluid rounded shadow media-img">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 d-flex justify-content-center animate__animated animate__fadeInLeft">
+        <img src="img/milagroobsass.jpg" alt="Milagro Buenos Aires" class="img-fluid rounded shadow media-img" loading="lazy">
       </div>
-      <div class="col-md-6 animate__animated animate__fadeInRight">
+      <div class="col-md-6 animate__animated animate__fadeInRight d-flex flex-column justify-content-center">
         <div class="highlight">
           <p>Una hostia consagrada cayó al suelo y, luego de ser preservada en agua, comenzó a sangrar. Bergoglio, como arzobispo, ordenó una investigación profunda. Los análisis revelaron tejido cardíaco humano, con signos de agonía intensa, sangre tipo AB. Este fenómeno reforzó el llamado a valorar el don de la Eucaristía.</p>
           <a href="Milagros-argentina.html" class="btn btn-success mt-3">Leer más sobre el milagro</a>
@@ -150,11 +233,11 @@
 
   <!-- ÚLTIMOS DÍAS Y SU MUERTE -->
   <section class="container py-5 fade-in">
-    <div class="row align-items-center">
-      <div class="col-md-6 animate__animated animate__fadeInLeft">
-        <img src="Imagenes/papaultimosdias.jpg" alt="Papa Francisco en sus últimos días" class="img-fluid rounded shadow media-img">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 d-flex justify-content-center animate__animated animate__fadeInLeft">
+        <img src="img/papaultimosdias.jpg" alt="Papa Francisco en sus últimos días" class="img-fluid rounded shadow media-img" loading="lazy">
       </div>
-      <div class="col-md-6 animate__animated animate__fadeInRight">
+      <div class="col-md-6 animate__animated animate__fadeInRight d-flex flex-column justify-content-center">
         <div class="highlight">
           <h2 class="h4">Sus últimos días y legado</h2>
           <p>
