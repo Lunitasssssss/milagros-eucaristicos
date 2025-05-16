@@ -55,6 +55,8 @@
       .display-5 {
         font-size: 2rem;
         word-break: break-word;
+        white-space: normal;
+        line-height: 1.2;
       }
     }
   </style>
@@ -211,7 +213,6 @@
       },
     });
 
-    // Botón primario ejemplo (si lo usas en otras páginas)
     document.addEventListener("DOMContentLoaded", () => {
       const botones = document.querySelectorAll(".boton-primario");
       botones.forEach(btn => {
