@@ -3,234 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Milagros Eucarísticos | Proyecto Carlo Acutis</title>
-  <meta name="description" content="Inspirado en Carlo Acutis, este sitio busca difundir los milagros eucarísticos del mundo y acercar la fe a las nuevas generaciones.">
-  <meta name="keywords" content="milagros eucarísticos, Carlo Acutis, fe, iglesia, catolicismo, inspiración">
-  <meta name="author" content="Luna Pajaro">
-  <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title>Milagros Eucarísticos | En memoria del Papa Francisco</title>
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap -->
+  <!-- Estilos Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Animaciones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-  <style>
-    .fade-in { opacity: 0; transition: opacity 1s; }
-    .fade-in.show { opacity: 1; }
-    .navbar.scrolled { background: #145a32 !important; transition: background 0.3s; }
-    .hero-img { max-height: 320px; object-fit: cover; }
-    .section-title { letter-spacing: 1px; }
-    .swiper img { width: 100%; height: 340px; object-fit: cover; border-radius: 12px; }
-    @media (max-width: 767px) {
-      .swiper img { height: 180px; }
-      .hero-img { max-height: 180px; }
-    }
-    @media (max-width: 575.98px) {
-      .navbar-brand {
-        font-size: 1.1rem;
-        white-space: normal;
-        word-break: break-word;
-        max-width: 70vw;
-      }
-      .navbar-nav {
-        text-align: center;
-      }
-      .navbar {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-      .hero-img {
-        max-width: 100%;
-        height: auto;
-      }
-      .display-5 {
-        font-size: 1.3rem !important;
-        word-break: break-word;
-        white-space: normal;
-        line-height: 1.2;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-      .container {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-      header.bg-success {
-        padding-top: 2rem !important;
-        padding-bottom: 1.5rem !important;
-      }
-    }
-  </style>
 </head>
+
 <body>
+
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Menú principal">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Ciberapostol de la Eucaristía</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <a class="navbar-brand" href="#">Ciberapostol de la eucaristia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="carlo.html">Carlo Acutis</a></li>
           <li class="nav-item"><a class="nav-link" href="milagros.html">Milagros</a></li>
-          <li class="nav-item"><a class="nav-link" href="carlo.html">Carlo</a></li>
-          <li class="nav-item"><a class="nav-link" href="francisco.html">Francisco</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO / PORTADA -->
-  <header class="bg-success text-white text-center py-5 mb-4" style="margin-top:56px;">
-    <div class="container">
-      <h1 class="display-5 fw-bold animate__animated animate__fadeInDown">Inspirados por Carlo Acutis</h1>
-      <p class="lead animate__animated animate__fadeInUp">Un sitio para dar a conocer los milagros eucarísticos del mundo, siguiendo el legado digital de Carlo.</p>
-      <a href="milagros.html" class="btn btn-warning btn-lg mt-3 me-2 animate__animated animate__pulse animate__infinite" aria-label="Ver milagros">Ver milagros</a>
-      <a href="carlo.html" class="btn btn-outline-light btn-lg mt-3 animate__animated animate__pulse animate__infinite" aria-label="Sobre Carlo">Sobre Carlo</a>
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container mt-4">
+    <div class="text-center">
+      <h1 class="mb-4">Milagros Eucarísticos en el mundo</h1>
+      <img src="imagenes/milagros.jpg" alt="Milagros Eucarísticos" class="img-fluid mb-4 rounded">
+      <p>Este sitio está dedicado a difundir los milagros eucarísticos recopilados por el Beato Carlo Acutis.</p>
     </div>
-  </header>
 
-  <!-- SWIPER -->
-  <div class="swiper" aria-label="Galería de imágenes de Carlo Acutis">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="img/carloremeraroja.jpg" alt="Carlo Acutis con remera roja y computadora" style="width:100%;height:340px;object-fit:contain;object-position:center;background:#fff;border-radius:12px;" loading="lazy">
+    <div class="row mt-5">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="imagenes/italia.jpg" class="card-img-top img-fluid" alt="Italia">
+          <div class="card-body">
+            <h5 class="card-title">Italia</h5>
+            <p class="card-text">Descubre los milagros eucarísticos ocurridos en Italia.</p>
+            <a href="Milagros-Italia.html" class="btn btn-primary w-100">Ver más</a>
+          </div>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="img/carlopelota.jpg" alt="Carlo Acutis jugando al fútbol" style="width:100%;height:340px;object-fit:contain;object-position:center;background:#fff;border-radius:12px;" loading="lazy">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="imagenes/argentina.jpg" class="card-img-top img-fluid" alt="Argentina">
+          <div class="card-body">
+            <h5 class="card-title">Argentina</h5>
+            <p class="card-text">Conoce los milagros sucedidos en Argentina.</p>
+            <a href="Milagros-argentina.html" class="btn btn-primary w-100">Ver más</a>
+          </div>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="img/beato.jpg" alt="Carlo Acutis beatificado" style="width:100%;height:340px;object-fit:contain;object-position:center;background:#fff;border-radius:12px;" loading="lazy">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="imagenes/mexico.jpg" class="card-img-top img-fluid" alt="México">
+          <div class="card-body">
+            <h5 class="card-title">México</h5>
+            <p class="card-text">Explora los milagros registrados en México.</p>
+            <a href="Milagro-mexico.html" class="btn btn-primary w-100">Ver más</a>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Botones de navegación -->
-    <div class="swiper-button-prev" tabindex="0" aria-label="Imagen anterior"></div>
-    <div class="swiper-button-next" tabindex="0" aria-label="Imagen siguiente"></div>
-    <!-- Paginación -->
-    <div class="swiper-pagination"></div>
   </div>
 
-  <!-- SECCIÓN SOBRE EL PROYECTO E INSPIRACIÓN -->
-  <section class="container py-5 fade-in">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <h2 class="fw-bold section-title">¿Cómo nació este proyecto?</h2>
-        <p>
-          Este sitio web nació inspirado en la obra de <strong>Carlo Acutis</strong>, un joven apasionado por la Eucaristía y la tecnología. Carlo creó una página web para recopilar y difundir los milagros eucarísticos reconocidos por la Iglesia en todo el mundo, convencido de que la fe y la ciencia pueden caminar juntas.
-        </p>
-        <p>
-          Siguiendo su ejemplo, este proyecto busca acercar a las nuevas generaciones a la fe, utilizando los medios digitales para dar a conocer estos testimonios de amor y esperanza. Aquí encontrarás información clara, imágenes, videos y recursos para profundizar en el misterio de la Eucaristía.
-        </p>
-        <blockquote class="blockquote mt-3">
-          <p class="mb-0">"La Eucaristía es mi autopista al cielo."</p>
-          <footer class="blockquote-footer text-end">Carlo Acutis</footer>
-        </blockquote>
-      </div>
-      <div class="col-md-6 text-center">
-        <img src="img/carlocamara.jpg" alt="Carlo Acutis joven con cámara" class="img-fluid rounded shadow hero-img animate__animated animate__fadeInRight" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN SOBRE EL PAPA FRANCISCO -->
-  <section id="francisco" class="container py-5 fade-in">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="img/Papafranciscopaloma.jpg" alt="Papa Francisco con paloma" class="img-fluid rounded shadow" loading="lazy">
-      </div>
-      <div class="col-md-6">
-        <h2 class="fw-bold section-title">El Papa Francisco y la Eucaristía</h2>
-        <p>El Papa Francisco ha sido un gran promotor de la adoración eucarística y la fe viva. Su testimonio inspira a millones de personas a acercarse a Jesús en la Eucaristía.</p>
-        <a href="francisco.html" class="btn btn-outline-primary mt-2" aria-label="Leer más sobre Francisco">Leer más sobre Francisco</a>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
-  <footer class="bg-dark text-center text-white py-4 mt-5">
-    <div class="container">
-      <p class="mb-0">© 2025 Proyecto Carlo Acutis. Inspirando nuevas generaciones a través de la Eucaristía.</p>
-    </div>
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Milagros Eucarísticos | Diseñado con amor.</p>
   </footer>
 
-  <!-- SCRIPTS -->
+  <!-- Scripts Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script>
-    // Navbar scroll effect
-    window.addEventListener('scroll', function () {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // Fade-in animation on scroll
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top < window.innerHeight && rect.bottom > 0
-      );
-    }
-    const fadeElements = document.querySelectorAll('.fade-in');
-    function checkFadeIn() {
-      fadeElements.forEach(element => {
-        if (isInViewport(element)) {
-          element.classList.add('show');
-        }
-      });
-    }
-    window.addEventListener('scroll', checkFadeIn);
-    window.addEventListener('load', checkFadeIn);
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // Swiper
-    const swiper = new Swiper(".swiper", {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const botones = document.querySelectorAll(".boton-primario");
-      botones.forEach(btn => {
-        btn.addEventListener("click", () => {
-          alert("Gracias por visitar este milagro!");
-        });
-      });
-    });
-  </script>
 </body>
 </html>
